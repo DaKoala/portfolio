@@ -1,0 +1,113 @@
+@mixin slide-in {
+  animation: slide-in 0.5s;
+}
+.slide-in {
+  @include slide-in;
+}
+
+@mixin fade-in {
+  animation: fade-in 0.5s;
+}
+.fade-in {
+  @include fade-in;
+}
+
+@mixin blur-in {
+  animation: blur-in 1s;
+}
+.blur-in {
+  @include blur-in;
+}
+
+@mixin swipe-in-from-right {
+  animation: swipe-in-from-right 0.5s;
+}
+.swipe-in-from-right {
+  @include swipe-in-from-right;
+}
+
+@mixin swipe-in-from-left {
+  animation: swipe-in-from-left 0.5s;
+}
+.swipe-in-from-left {
+  @include swipe-in-from-left;
+}
+
+@mixin swipe-in-from-top {
+  animation: swipe-in-from-top 0.5s;
+}
+.swipe-in-from-top {
+  @include swipe-in-from-top;
+}
+
+@mixin swipe-in-from-bottom {
+  animation: swipe-in-from-top 0.5s;
+}
+.swipe-in-from-bottom {
+  @include swipe-in-from-bottom;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blur-in {
+  from {
+    filter: blur(2px);
+  }
+  to {
+    filter: blur(0);
+  }
+}
+
+@keyframes swipe-in-from-right {
+  from {
+    transform: translateX(50vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes swipe-in-from-left {
+  from {
+    transform: translateX(-50vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes swipe-in-from-top {
+  from {
+    transform: translateY(-50vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes swipe-in-from-bottom {
+  from {
+    transform: translateY(50vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
