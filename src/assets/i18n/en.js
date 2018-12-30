@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     nav: {
         language: '中文',
         home: 'Home',
