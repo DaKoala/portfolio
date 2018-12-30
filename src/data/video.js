@@ -5,17 +5,17 @@ const breakoutForTwoVideo = require('../assets/video/breakoutForTwo.mp4');
 export default [
     {
         name: 'Magic War',
-        description: 'A two-player competitive action game, powered by Processing and Leap Motion',
+        description: 'games.magicWar',
         src: magicWarVideo,
     },
     {
         name: 'Line Run',
-        description: 'An 3D endless running game, powered by Processing and KinectV2',
+        description: 'games.lineRun',
         src: lineRunVideo,
     },
     {
         name: 'Breakout For Two',
-        description: 'An two-player breakout game, powered by Python and Pygame',
+        description: 'games.breakoutForTwo',
         src: breakoutForTwoVideo,
     },
 ];

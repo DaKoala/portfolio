@@ -1,7 +1,7 @@
 <template>
     <section class="section">
         <h2 class="section__name">{{video.name}}</h2>
-        <p class="section__description">{{video.description}}</p>
+        <p class="section__description">{{$t(video.description)}}</p>
         <my-video :video-src="video.src"></my-video>
     </section>
 </template>

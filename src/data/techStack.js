@@ -1,6 +1,6 @@
 export default [
     {
-        title: 'Programming Languages',
+        title: 'about.programmingLanguages',
         items: [
             {
                 iconList: ['fab', 'js-square'],
@@ -13,7 +13,7 @@ export default [
         ],
     },
     {
-        title: 'Other Languages',
+        title: 'about.otherLanguages',
         items: [
             {
                 iconList: ['fab', 'html5'],
@@ -30,7 +30,7 @@ export default [
         ],
     },
     {
-        title: 'Frameworks',
+        title: 'about.frameworks',
         items: [
             {
                 iconList: ['fab', 'vuejs'],
@@ -53,7 +53,7 @@ export default [
         ],
     },
     {
-        title: 'Libraries',
+        title: 'about.libraries',
         items: [
             {
                 iconList: ['fas', 'dollar-sign'],
@@ -75,7 +75,7 @@ export default [
         ],
     },
     {
-        title: 'Databases',
+        title: 'about.databases',
         items: [
             {
                 iconList: ['fas', 'database'],
@@ -84,7 +84,7 @@ export default [
         ],
     },
     {
-        title: 'Tools',
+        title: 'about.tools',
         items: [
             {
                 text: 'Webpack',

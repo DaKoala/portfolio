@@ -3,22 +3,22 @@
         <navigation></navigation>
         <main class="container container--row home-container fade-in">
             <header class="intro">
-                <h1 class="intro__name">Yijie "Billy" Zou</h1>
+                <h1 class="intro__name">{{$t('home.name')}}</h1>
                 <p class="intro__title">
                     <font-awesome-icon icon="graduation-cap" />
-                    Student major in Computer Science & Interactive Media Arts at NYU
+                    {{$t('home.academic')}}
                 </p>
                 <p class="intro__title">
                     <font-awesome-icon icon="code" />
-                    Web front-end developer
+                    {{$t('home.title')}}
                 </p>
                 <p class="intro__title">
                     <font-awesome-icon icon="gamepad" />
-                    Game lover and amateur game developer
+                    {{$t('home.game')}}
                 </p>
                 <div class="intro__btn-wrapper">
-                    <router-link to="/about" class="btn">About me</router-link>
-                    <router-link to="/projects" class="btn">Projects</router-link>
+                    <router-link to="/about" class="btn">{{$t('home.about')}}</router-link>
+                    <router-link to="/projects" class="btn">{{$t('home.projects')}}</router-link>
                 </div>
             </header>
             <img class="photo" src="../assets/img/photo.jpeg" />

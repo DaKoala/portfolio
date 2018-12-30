@@ -3,10 +3,10 @@
         <navigation></navigation>
         <main class="container container--narrow">
             <span class="title" :class="{'title--deactive': !aboutIsActive}" @click="toggleActive">
-                About Billy
+                {{$t('about.about')}}
             </span>
             <span class="title" :class="{'title--deactive': aboutIsActive}" @click="toggleActive">
-                Tech Stack
+                {{$t('about.tech')}}
             </span>
             <article class="intro">
                 <template v-if="aboutIsActive">
@@ -76,6 +76,7 @@ export default {
     methods: {
         toggleActive() {
             this.aboutIsActive = !this.aboutIsActive;
+            console.log(this.$t('nav.language'));
         },
     },
 };

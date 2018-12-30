@@ -7,44 +7,47 @@
             </a>
             <router-link to="/" class="nav__item"
                          :class="{'nav__item--active': path.length === 1}">
-                Home
+                {{$t('nav.home')}}
             </router-link>
             <router-link to="/about" class="nav__item"
                          :class="{'nav__item--active': path.indexOf('about') > -1}">
-                About
+                {{$t('nav.about')}}
             </router-link>
             <router-link to="/projects" class="nav__item"
                          :class="{'nav__item--active': path.indexOf('projects') > -1}">
-                Projects
+                {{$t('nav.projects')}}
             </router-link>
             <router-link to="/games" class="nav__item"
                          :class="{'nav__item--active': path.indexOf('games') > -1}">
-                Games
+                {{$t('nav.games')}}
             </router-link>
+            <div class="nav__language" @click="changeLanguage">
+                {{$t('nav.language')}}
+            </div>
         </nav>
         <transition name="nav-slide">
-        <nav class="nav--left" v-if="isNavVisible">
-            <router-link to="/" class="nav__item--small"
-                         :class="{'nav__item--active': path.length === 1}"
-                         @click.stop="hideNavLeft">
-                Home
-            </router-link>
-            <router-link to="/about" class="nav__item--small"
-                         :class="{'nav__item--active': path.indexOf('about') > -1}"
-                         @click.stop="hideNavLeft">
-                About
-            </router-link>
-            <router-link to="/projects" class="nav__item--small"
-                         :class="{'nav__item--active': path.indexOf('projects') > -1}"
-                         @click.stop="hideNavLeft">
-                Projects
-            </router-link>
-            <router-link to="/games" class="nav__item--small"
-                         :class="{'nav__item--active': path.indexOf('games') > -1}"
-                         @click.stop="hideNavLeft">
-                Games
-            </router-link>
-        </nav>
+            <nav class="nav--left" v-if="isNavVisible">
+                <router-link to="/" class="nav__item--small"
+                             :class="{'nav__item--active': path.length === 1}"
+                             @click.stop="hideNavLeft">
+                    Home
+                </router-link>
+                <router-link to="/about" class="nav__item--small"
+                             :class="{'nav__item--active': path.indexOf('about') > -1}"
+                             @click.stop="hideNavLeft">
+                    About
+                </router-link>
+                <router-link to="/projects" class="nav__item--small"
+                             :class="{'nav__item--active': path.indexOf('projects') > -1}"
+                             @click.stop="hideNavLeft">
+                    Projects
+                </router-link>
+                <router-link to="/games" class="nav__item--small"
+                             :class="{'nav__item--active': path.indexOf('games') > -1}"
+                             @click.stop="hideNavLeft">
+                    Games
+                </router-link>
+            </nav>
         </transition>
     </div>
 </template>
@@ -64,6 +67,9 @@ export default {
         },
         hideNavLeft() {
             this.isNavVisible = false;
+        },
+        changeLanguage() {
+            this.$i18n.locale = this.$i18n.locale === 'zh' ? 'en' : 'zh';
         },
     },
 };
@@ -104,8 +110,18 @@ export default {
         z-index: -100;
     }
 
+    .nav__language {
+        color: #fff;
+        position: absolute;
+        top: calc(50% - 9.5px);
+        right: 100px;
+        cursor: pointer;
+        user-select: none;
+    }
+
     .nav__item {
-        font-family: 'Roboto Condensed', sans-serif;
+        font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, "PingFang SC",
+        "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
         display: flex;
         justify-content: center;
         align-items: center;

@@ -1,6 +1,6 @@
 <template>
     <section class="tech">
-        <h2 class="tech__title">{{section.title}}</h2>
+        <h2 class="tech__title">{{$t(section.title)}}</h2>
         <div class="tech__line"></div>
         <div class="tech__text">
             <span class="tech__item" v-for="(item, i) in section.items" :key="i">
