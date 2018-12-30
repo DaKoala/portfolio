@@ -37,14 +37,6 @@ const router = new Router({
             }
         },
         {
-            path: '/homework',
-            name: 'Homework',
-            component: () => import('./views/Homework.vue'),
-            meta: {
-                title: 'Web Dev Homework',
-            }
-        },
-        {
             path: '/games',
             name: 'Games',
             component: () => import('./views/Games.vue'),

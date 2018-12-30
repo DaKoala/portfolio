@@ -21,10 +21,6 @@
                          :class="{'nav__item--active': path.indexOf('games') > -1}">
                 Games
             </router-link>
-            <router-link to="/homework" class="nav__item"
-                         :class="{'nav__item--active': path.indexOf('homework') > -1}">
-                Homework
-            </router-link>
         </nav>
         <transition name="nav-slide">
         <nav class="nav--left" v-if="isNavVisible">
@@ -47,11 +43,6 @@
                          :class="{'nav__item--active': path.indexOf('games') > -1}"
                          @click.stop="hideNavLeft">
                 Games
-            </router-link>
-            <router-link to="/homework" class="nav__item--small"
-                         :class="{'nav__item--active': path.indexOf('homework') > -1}"
-                         @click.stop="hideNavLeft">
-                Homework
             </router-link>
         </nav>
         </transition>

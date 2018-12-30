@@ -2,11 +2,9 @@
     <div>
         <navigation></navigation>
         <main class="container project-container">
-            <project-card v-for="(project, idx) in projects" :key="project.name"
-                          :project="project" @activate="showModal(idx)"></project-card>
+            <project-card v-for="(project, idx) in projects" :key="idx"
+                          :project="project"></project-card>
         </main>
-        <swiper :curr-index="photoIndex" :photos="photos" @hide="hideModal"
-                @changephoto="handlePhotoChange"></swiper>
         <contact></contact>
     </div>
 </template>
@@ -15,14 +13,12 @@
 import Navigation from '../components/Navigation.vue';
 import ProjectCard from '../components/ProjectCard.vue';
 import Contact from '../components/Contact.vue';
-import Swiper from '../components/Swiper.vue';
 import { photosData, projectsData } from '../data/project';
 
 export default {
     name: 'Projects',
     components: {
         Contact,
-        Swiper,
         Navigation,
         ProjectCard,
     },
@@ -34,19 +30,6 @@ export default {
         };
     },
     methods: {
-        showModal(index) {
-            this.photoIndex = index;
-        },
-        hideModal() {
-            this.photoIndex = null;
-        },
-        handlePhotoChange(isNext) {
-            if (isNext && this.photoIndex < this.photos.length - 1) {
-                this.photoIndex += 1;
-            } else if (!isNext && this.photoIndex > 0) {
-                this.photoIndex -= 1;
-            }
-        },
     },
 };
 </script>

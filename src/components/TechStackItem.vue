@@ -44,8 +44,8 @@ export default {
     .tech__item {
         display: inline-block;
         margin-top: 0.5em;
-        margin-left: 1em;
-        &:first-child {
+        margin-right: 1em;
+        &:last-child {
             margin-left: 0;
         }
     }
