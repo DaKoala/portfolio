@@ -17,7 +17,7 @@ const router = new Router({
             name: 'home',
             component: Home,
             meta: {
-                title: 'Yijie "Billy" Zou'
+                title: 'title.home'
             }
         },
         {
@@ -25,7 +25,7 @@ const router = new Router({
             name: 'about',
             component: () => import('./views/About.vue'),
             meta: {
-                title: 'About Me',
+                title: 'title.about',
             }
         },
         {
@@ -33,7 +33,7 @@ const router = new Router({
             name: 'projects',
             component: () => import('./views/Projects.vue'),
             meta: {
-                title: 'My Projects',
+                title: 'title.projects',
             }
         },
         {
@@ -41,7 +41,7 @@ const router = new Router({
             name: 'Games',
             component: () => import('./views/Games.vue'),
             meta: {
-                title: 'My Games',
+                title: 'title.games',
             }
         }
     ],
@@ -68,7 +68,7 @@ if (ENABLE_GA) {
 
         router.beforeEach((to, from, next) => {
             if (to.meta.title) {
-                document.title = to.meta.title;
+                document.title = router.app.$t(to.meta.title);
             }
             next();
         });

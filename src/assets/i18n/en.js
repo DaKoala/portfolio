@@ -1,4 +1,10 @@
 export default {
+    title: {
+        home: 'Yijie "Billy" Zou',
+        about: 'About Me',
+        projects: 'My Projects',
+        games: 'My Games',
+    },
     nav: {
         language: '中文',
         home: 'Home',

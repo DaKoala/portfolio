@@ -1,4 +1,10 @@
 export default {
+    title: {
+        home: '邹翊杰 Billy',
+        about: '关于我',
+        projects: '我的项目',
+        games: '我的游戏',
+    },
     nav: {
         language: 'English',
         home: '主页',
