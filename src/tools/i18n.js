@@ -10,7 +10,9 @@ const messages = {
     en,
 };
 
+const isChinese = navigator.language.indexOf('zh') > -1;
+
 export default new VueI18n({
-    locale: 'zh',
+    locale: isChinese ? 'zh' : 'en',
     messages,
 });

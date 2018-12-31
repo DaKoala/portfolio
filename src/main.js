@@ -75,3 +75,6 @@ new Vue({
     i18n,
     render: h => h(App),
 }).$mount('#app');
+
+const isChinese = navigator.language.indexOf('zh') > -1;
+document.title = isChinese ? '邹翊杰 Billy' : 'Yijie "Billy" Zou';

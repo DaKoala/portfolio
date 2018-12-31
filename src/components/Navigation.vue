@@ -30,22 +30,22 @@
                 <router-link to="/" class="nav__item--small"
                              :class="{'nav__item--active': path.length === 1}"
                              @click.stop="hideNavLeft">
-                    Home
+                    {{$t('nav.home')}}
                 </router-link>
                 <router-link to="/about" class="nav__item--small"
                              :class="{'nav__item--active': path.indexOf('about') > -1}"
                              @click.stop="hideNavLeft">
-                    About
+                    {{$t('nav.about')}}
                 </router-link>
                 <router-link to="/projects" class="nav__item--small"
                              :class="{'nav__item--active': path.indexOf('projects') > -1}"
                              @click.stop="hideNavLeft">
-                    Projects
+                    {{$t('nav.projects')}}
                 </router-link>
                 <router-link to="/games" class="nav__item--small"
                              :class="{'nav__item--active': path.indexOf('games') > -1}"
                              @click.stop="hideNavLeft">
-                    Games
+                    {{$t('nav.games')}}
                 </router-link>
             </nav>
         </transition>

@@ -11,37 +11,21 @@
             <article class="intro">
                 <template v-if="aboutIsActive">
                     <p class="intro__para intro__para--indent">
-                        Billy is currently a junior student at
-                        NYU Shanghai. He double majors in Computer Science & Interactive Media Arts.
-                        He is a junior web front-end developer, who started doing front-end
-                        development
-                        work in 2017.
+                        {{$t('about.p1')}}
                     </p>
                     <p class="intro__para intro__para--indent">
-                        He started coding in freshman year with Processing as the first programming
-                        language he learned. He declared major as Computer Science the second
-                        semester
-                        and started learning programming systematically using Python. Apart from the
-                        fundamental computer science courses taken in school, Billy spent much time
-                        studying web development in his spare time. His web development skills are
-                        mainly acquired through self-studying.
+                        {{$t('about.p2')}}
                     </p>
                     <p class="intro__para intro__para--indent">
-                        JavaScript is Billy's primary programming language. He is familiar with
-                        Javascript, including ES6 and newer syntax. He is also familiar with Sass
-                        and
-                        some new CSS features such as flexbox and grid. He got started with
-                        front-end
-                        development using jQuery and Bootstrap. His first professional front-end
-                        work
-                        was at <a class="intro__link" href="https://en.wikipedia.org/wiki/Vipshop">Vip.com</a>
-                        where he became experienced in
-                        <a class="intro__link"
-                           href="https://walkthechat.com/wechat-mini-programs-simple-introduction/">
-                            Wechat Mini Program
-                        </a> and Vue.js as an intern front-end engineer. Now Billy mainly works with
-                        Vue.js, Node.js and MongoDB. With his Python experience, he is also able to
-                        develop web application using frameworks like Flask and Django.
+                        {{$t('about.p3First')}}
+                        <a class="intro__link" :href="$t('about.link1')">
+                            {{$t('about.a1')}}
+                        </a>
+                        {{$t('about.p3Second')}}
+                        <a class="intro__link" :href="$t('about.link2')">
+                            {{$t('about.a2')}}
+                        </a>
+                        {{$t('about.p3Third')}}
                     </p>
                 </template>
                 <template v-else>
@@ -116,7 +100,7 @@ export default {
     .intro__para {
         color: $light-black;
         font-size: 1.5rem;
-        line-height: 2rem;
+        line-height: 2.5rem;
         @include slide-in;
     }
 
