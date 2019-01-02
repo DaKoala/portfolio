@@ -13,7 +13,7 @@
 import Navigation from '../components/Navigation.vue';
 import ProjectCard from '../components/ProjectCard.vue';
 import Contact from '../components/Contact.vue';
-import { photosData, projectsData } from '../data/project';
+import projectsData from '../data/project';
 
 export default {
     name: 'Projects',
@@ -25,7 +25,6 @@ export default {
     data() {
         return {
             photoIndex: null,
-            photos: photosData,
             projects: projectsData,
         };
     },

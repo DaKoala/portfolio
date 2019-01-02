@@ -44,4 +44,14 @@ export default {
         lineRun: 'An 3D endless running game, powered by Processing and KinectV2',
         breakoutForTwo: 'An two-player breakout game, powered by Python and Pygame',
     },
+    projects: {
+        goBack: 'View other projects',
+        awesomeTimetable: {
+            time: 'November, 2018',
+            paragraphs: [
+                'This is a web calendar application. Users can create different weekly plans and visualize them. This application is suitable for students to visualize course timetable before enroll and manage their back-up plans.',
+                'The application is developed by Billy independently. Billy used Vue.js as the front-end framework, Express as the back-end framework and MongoDB as the database. It is a single page application powered by Vue Router and Vuex. The front-end and the back-end are separated, that is, the front-end website is a static website and all the interactions are carried out by RESTful APIs. It took Billy 2 weeks to finish the project from scratch.',
+            ],
+        },
+    },
 };

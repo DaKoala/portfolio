@@ -44,4 +44,14 @@ export default {
         lineRun: '一个用Processing和Kinect2开发的3D跑酷游戏',
         breakoutForTwo: '一个用Python的Pygame库开发的双人打砖块游戏',
     },
+    projects: {
+        goBack: '查看其他项目',
+        awesomeTimetable: {
+            time: '2018年11月',
+            paragraphs: [
+                '这是一个日历性质的网页应用。 用户可以创建每周计划并将它们可视化。这个应用非常适合学生们在选课前排课表，制定备选方案时使用。',
+                '整个应用全部由我独立开发完成。我用了Vue.js作为前端框架，Express作为后端框架，MongoDB作为数据库。这是一个借助了Vue Router和Vuex开发而成的单页应用。这个应用是前后端分离的，也就是说前端只是一个静态页面，前后端的交互全部通过RESTful API来完成。从零开始，我花了两周时间完成了这个应用的开发。',
+            ],
+        },
+    },
 };
