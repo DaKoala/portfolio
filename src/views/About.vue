@@ -60,7 +60,6 @@ export default {
     methods: {
         toggleActive() {
             this.aboutIsActive = !this.aboutIsActive;
-            console.log(this.$t('nav.language'));
         },
     },
 };

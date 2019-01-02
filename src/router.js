@@ -29,12 +29,16 @@ const router = new Router({
             }
         },
         {
+            path: '/projects/:projectName',
+            component: () => import('./views/ProjectDetail.vue'),
+            meta: {
+                title: 'project',
+            }
+        },
+        {
             path: '/projects',
             name: 'projects',
             component: () => import('./views/Projects.vue'),
-            meta: {
-                title: 'title.projects',
-            }
         },
         {
             path: '/games',

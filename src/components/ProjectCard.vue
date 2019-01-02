@@ -14,7 +14,7 @@ export default {
     },
     methods: {
         handleImageClick() {
-            this.$emit('activate');
+            this.$router.push(`/projects/${this.project.param}`);
         },
     },
 };
