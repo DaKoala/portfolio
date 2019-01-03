@@ -2,7 +2,7 @@
     <figure class="card">
         <img class="card__image" :src="project.imagePath" :alt="project.name"
              @click="handleImageClick">
-        <figcaption class="card__caption">{{project.name}}</figcaption>
+        <figcaption class="card__caption">{{$t(project.name)}}</figcaption>
     </figure>
 </template>
 
@@ -47,10 +47,9 @@ export default {
     }
 
     .card__caption {
-        text-align: center;
-        font-size: 1.5rem;
+        @include center-flex;
+        font-size: 1.3rem;
         color: #fff;
-        margin-top: 0.3em;
         cursor: default;
         user-select: none;
     }
@@ -70,10 +69,6 @@ export default {
             &:hover {
                 filter: none;
             }
-        }
-
-        .card__caption {
-            margin-top: 0;
         }
     }
 </style>

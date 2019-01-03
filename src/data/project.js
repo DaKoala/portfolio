@@ -1,38 +1,38 @@
 const miniMessageImg = require('../assets/img/thumbnails/miniMessage.png');
 const awesomeTimetableImg = require('../assets/img/thumbnails/awesomeTimetable.png');
 const focusImg = require('../assets/img/thumbnails/focus.png');
-const billSpliterImg = require('../assets/img/thumbnails/billSpliter.png');
-const daphnesLaurelImg = require('../assets/img/thumbnails/daphnesLaurel.png');
+const billSplitterImg = require('../assets/img/thumbnails/billSpliter.png');
+const daphneSLaurelImg = require('../assets/img/thumbnails/daphnesLaurel.png');
 const toDoListImg = require('../assets/img/thumbnails/toDoList.png');
 
 const projectsData = [
     {
-        name: 'Awesome Timetable',
+        name: 'projects.awesomeTimetable.name',
         imagePath: awesomeTimetableImg,
         param: 'awesome-timetable',
     },
     {
-        name: 'Mini Message',
+        name: 'projects.miniMessage.name',
         imagePath: miniMessageImg,
         param: 'mini-message',
     },
     {
-        name: 'Focus',
+        name: 'projects.focus.name',
         imagePath: focusImg,
         param: 'focus',
     },
     {
-        name: 'Bill Spliter',
-        imagePath: billSpliterImg,
-        param: 'bill-spliter',
+        name: 'projects.billSplitter.name',
+        imagePath: billSplitterImg,
+        param: 'bill-splitter',
     },
     {
-        name: 'Daphne\'s Laurel',
-        imagePath: daphnesLaurelImg,
+        name: 'projects.daphneSLaurel.name',
+        imagePath: daphneSLaurelImg,
         param: 'daphne-s-laurel',
     },
     {
-        name: 'To-do List',
+        name: 'projects.toDoList.name',
         imagePath: toDoListImg,
         param: 'to-do-list',
     },

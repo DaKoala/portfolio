@@ -47,11 +47,106 @@ export default {
     projects: {
         goBack: 'View other projects',
         awesomeTimetable: {
+            name: 'Calendar Application',
             time: 'November, 2018',
             paragraphs: [
-                'This is a web calendar application. Users can create different weekly plans and visualize them. This application is suitable for students to visualize course timetable before enroll and manage their back-up plans.',
-                'The application is developed by Billy independently. Billy used Vue.js as the front-end framework, Express as the back-end framework and MongoDB as the database. It is a single page application powered by Vue Router and Vuex. The front-end and the back-end are separated, that is, the front-end website is a static website and all the interactions are carried out by RESTful APIs. It took Billy 2 weeks to finish the project from scratch.',
+                [
+                    {
+                        type: 'text',
+                        content: 'This is a web calendar application. Users can create different weekly plans and visualize them. This application is suitable for students to visualize course timetable before enroll and manage their back-up plans.',
+                    },
+                ],
+                [
+                    {
+                        type: 'text',
+                        content: 'The application is developed by Billy independently. Billy used Vue.js as the front-end framework, Express as the back-end framework and MongoDB as the database. Billy also used ElementUI, a UI library developed by ele.me. It is a single page application powered by Vue Router and Vuex. The front-end and the back-end are separated, that is, the front-end website is a static website and all the interactions are carried out by RESTful APIs. It took Billy 2 weeks to finish the project from scratch.',
+                    },
+                ],
             ],
+        },
+        miniMessage: {
+            name: 'Chat Room Application',
+            time: 'April, 2018',
+            paragraphs: [
+                [
+                    {
+                        type: 'text',
+                        content: 'This is an online chat room application. Users can either talk with strangers in the public lobby or talk with friends by creating their own private chat rooms.',
+                    },
+                ],
+                [
+                    {
+                        type: 'text',
+                        content: 'The application is developed by Billy independently. Billy used jQuery and Bootstrap as front-end libraries, Flask as the back-end framework and SQLite as the database. The application was initially developed using AJAX Polling, however, Web Socket could be a better choice. Billy is considering refactoring the project using Web Socket.',
+                    },
+                ],
+            ],
+        },
+        focus: {
+            name: 'LBS Social Application',
+            time: 'July, 2018',
+            paragraphs: [
+                [
+                    {
+                        type: 'text',
+                        content: 'This is a LBS social application. Users can post articles based on location. Articles can only be viewed by people nearby.',
+                    },
+                ],
+                [
+                    {
+                        type: 'text',
+                        content: 'This is the web end of the application, developed using Vue.js and SDK of Amap. Users do not need to sign in but they can only view articles. The application is an entry for Hack Shanghai held in July, 2018. It is a prototype of the product, developed within 24 hours.',
+                    },
+                ],
+            ],
+        },
+        billSplitter: {
+            name: 'Bill Splitting Application',
+            time: 'September, 2018',
+            paragraphs: [
+                [
+                    {
+                        type: 'text',
+                        content: 'This is a Wechat Mini Program to split bills. Sometimes the final payment includes tax and tip but people only know the original price. In this case, the application can help people split the bill conveniently. It is also good for people who share food delivery with others. Please Search "AA分摊助手" on Wechat to access the Mini Program.',
+                    },
+                ],
+                [
+                    {
+                        type: 'text',
+                        content: 'The application is developed using Wechat Mini Program framework and the official UI library of Wechat, WeUI.',
+                    },
+                ],
+            ],
+        },
+        daphneSLaurel: {
+            name: 'Daphne\'s Laurel(Digital Art)',
+            time: 'December, 2017',
+            paragraphs: [
+                [
+                    {
+                        type: 'text',
+                        content: 'This is a digital artwork. It tell the Greek myth about Apollo and Daphne. Apollo fell in love with Daphne but Daphne hated Apollo. In order to elude Apollo\'s courting, Daphne became a laurel tree.',
+                    },
+                ],
+                [
+                    {
+                        type: 'text',
+                        content: 'The project is developed using p5.js, a JavaScript library for visual arts development. Please visit',
+                    },
+                    {
+                        type: 'link',
+                        content: 'https://im.billyzou.com/Daphne-s-Laurel/',
+                        link: 'https://im.billyzou.com/Daphne-s-Laurel/',
+                    },
+                    {
+                        type: 'text',
+                        content: 'to view the project.',
+                    },
+                ],
+            ],
+        },
+        toDoList: {
+            name: 'To-do List Application',
         },
     },
 };

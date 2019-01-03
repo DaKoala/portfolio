@@ -5,7 +5,7 @@
             <h1 class="title">{{project.title}}</h1>
             <p class="support">
                 <font-awesome-icon :icon="['fas', 'clock']"></font-awesome-icon>
-                {{$t(time)}}
+                {{time}}
             </p>
             <p class="support">
                 <font-awesome-icon :icon="['fas', 'tags']"></font-awesome-icon>
@@ -19,8 +19,15 @@
                 <img class="thumbnail" :src="item" v-for="(item, index) in project.images"
                      :key="index" />
             </div>
-            <p class="content" v-for="(item, index) in $t(paragraphs)" :key="index">
-                {{item}}
+            <p class="content" v-for="(block, outerIdx) in paragraphs" :key="outerIdx">
+                <template v-for="(ele, innerIdx) in block">
+                    <span v-if="ele.type === 'text'" :key="innerIdx">
+                        {{ele.content}}
+                    </span>
+                    <a class="content__link" :href="ele.link" v-else :key="innerIdx">
+                        {{ele.content}}
+                    </a>
+                </template>
             </p>
             <p class="content">
                 <router-link class="content__link" to="/projects">
@@ -51,10 +58,10 @@ export default {
             return this.project.tags.join(', ');
         },
         paragraphs() {
-            return `projects['${this.project.camelCase}'].paragraphs`;
+            return this.$t(`projects['${this.project.camelCase}'].paragraphs`);
         },
         time() {
-            return `projects['${this.project.camelCase}'].time`;
+            return this.$t(`projects['${this.project.camelCase}'].time`);
         },
     },
     created() {
@@ -98,7 +105,11 @@ export default {
         max-width: 80%;
         border-radius: 8px;
         border: 2px solid #000;
-        margin-top: 10px;
+        margin: {
+            top: 10px;
+            left: 10px;
+            right: 10px;
+        }
     }
 
     .content {

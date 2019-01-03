@@ -21,7 +21,7 @@
                     <router-link to="/projects" class="btn">{{$t('home.projects')}}</router-link>
                 </div>
             </header>
-            <img class="photo" src="../assets/img/photo.jpeg" />
+            <img class="photo" src="../assets/img/info/photo.jpeg" />
         </main>
         <contact></contact>
     </div>
