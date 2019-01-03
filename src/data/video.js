@@ -4,18 +4,18 @@ const breakoutForTwoVideo = require('../assets/video/breakoutForTwo.mp4');
 
 export default [
     {
-        name: 'Magic War',
-        description: 'games.magicWar',
+        name: 'games.magicWar',
+        description: 'games.magicWarDesc',
         src: magicWarVideo,
     },
     {
-        name: 'Line Run',
-        description: 'games.lineRun',
+        name: 'games.lineRun',
+        description: 'games.lineRunDesc',
         src: lineRunVideo,
     },
     {
-        name: 'Breakout For Two',
-        description: 'games.breakoutForTwo',
+        name: 'games.breakoutForTwo',
+        description: 'games.breakoutForTwoDesc',
         src: breakoutForTwoVideo,
     },
 ];

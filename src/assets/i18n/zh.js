@@ -40,9 +40,12 @@ export default {
         p3Third: '和Vue.js。现在我主要用Vue.js、Node.js和MongoDB进行开发工作。基于我的Python基础，我也可以用如Flask或者Django这样的框架进行网页应用的开发。',
     },
     games: {
-        magicWar: '一个用Processing和Leap Motion开发的双人对战游戏',
-        lineRun: '一个用Processing和Kinect2开发的3D跑酷游戏',
-        breakoutForTwo: '一个用Python的Pygame库开发的双人打砖块游戏',
+        magicWar: '魔法之战',
+        magicWarDesc: '一个用Processing和Leap Motion开发的双人对战游戏',
+        lineRun: '无“线”奔跑',
+        lineRunDesc: '一个用Processing和Kinect2开发的3D跑酷游戏',
+        breakoutForTwo: '双人打砖块',
+        breakoutForTwoDesc: '一个用Python的Pygame库开发的双人打砖块游戏',
     },
     projects: {
         goBack: '查看其他项目',
@@ -120,9 +123,54 @@ export default {
         },
         daphneSLaurel: {
             name: '达芙妮之月桂（数字艺术）',
+            time: '2017年12月',
+            paragraphs: [
+                [
+                    {
+                        type: 'text',
+                        content: '这是一个数字艺术作品。它讲述了古希腊神话中太阳神阿波罗和月桂女神达芙妮的故事。阿波罗爱上了达芙妮然而达芙妮却讨厌阿波罗。为了躲避阿波罗的追求，达芙妮化作了一棵月桂树。',
+                    },
+                ],
+                [
+                    {
+                        type: 'text',
+                        content: '这个项目是用p5.js开发的，这是一个用于开发视觉艺术作品的JavaScript库。请访问',
+                    },
+                    {
+                        type: 'link',
+                        content: 'https://im.billyzou.com/Daphne-s-Laurel/',
+                        link: 'https://im.billyzou.com/Daphne-s-Laurel/',
+                    },
+                    {
+                        type: 'text',
+                        content: '来观看这个作品。',
+                    },
+                ],
+            ],
         },
         toDoList: {
             name: '待办事项应用',
+            time: '2017年7月',
+            paragraphs: [
+                [
+                    {
+                        type: 'text',
+                        content: '这是一个待办事项网页应用，用户可以创建待办事项并管理它们。用户可以标记事项完成，设置过期时间及优先级。',
+                    },
+                ],
+                [
+                    {
+                        type: 'text',
+                        content: '这个项目开发的时候，我对HTML、CSS和JavaScript一无所知，仅仅学了一些Python的基本语法。我用了6天时间独立开发完成了这个项目，在这期间我自学了Django、PostgreSQL、HTML、CSS和Bootstrap并最终完成了开发。由于这个项目，我开始接触Web前端开发。',
+                    },
+                ],
+                [
+                    {
+                        type: 'text',
+                        content: '这个项目是我独立完成的。前端用了Bootstrap作为UI库，后端用了Django框架，数据库是PostgreSQL。',
+                    },
+                ],
+            ],
         },
     },
 };

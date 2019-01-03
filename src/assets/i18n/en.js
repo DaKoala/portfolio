@@ -40,9 +40,12 @@ export default {
         p3Third: 'and Vue.js as an intern front-end engineer. Now Billy mainly works with Vue.js, Node.js and MongoDB. With his Python experience, he is also able to develop web application using frameworks like Flask and Django.',
     },
     games: {
-        magicWar: 'A two-player competitive action game, powered by Processing and Leap Motion',
-        lineRun: 'An 3D endless running game, powered by Processing and KinectV2',
-        breakoutForTwo: 'An two-player breakout game, powered by Python and Pygame',
+        magicWar: 'Magic War',
+        magicWarDesc: 'A two-player competitive action game, powered by Processing and Leap Motion',
+        lineRun: 'Line Run',
+        lineRunDesc: 'An 3D endless running game, powered by Processing and KinectV2',
+        breakoutForTwo: 'Breakout For Two',
+        breakoutForTwoDesc: 'An two-player breakout game, powered by Python and Pygame',
     },
     projects: {
         goBack: 'View other projects',
@@ -77,7 +80,7 @@ export default {
                 [
                     {
                         type: 'text',
-                        content: 'The application is developed by Billy independently. Billy used jQuery and Bootstrap as front-end libraries, Flask as the back-end framework and SQLite as the database. The application was initially developed using AJAX Polling, however, Web Socket could be a better choice. Billy is considering refactoring the project using Web Socket.',
+                        content: 'The application was developed by Billy independently. Billy used jQuery and Bootstrap as front-end libraries, Flask as the back-end framework and SQLite as the database. The application was initially developed using AJAX Polling, however, Web Socket could be a better choice. Billy is considering refactoring the project using Web Socket.',
                     },
                 ],
             ],
@@ -113,7 +116,7 @@ export default {
                 [
                     {
                         type: 'text',
-                        content: 'The application is developed using Wechat Mini Program framework and the official UI library of Wechat, WeUI.',
+                        content: 'The application was developed using Wechat Mini Program framework and the official UI library of Wechat, WeUI.',
                     },
                 ],
             ],
@@ -147,6 +150,27 @@ export default {
         },
         toDoList: {
             name: 'To-do List Application',
+            time: 'July, 2017',
+            paragraphs: [
+                [
+                    {
+                        type: 'text',
+                        content: 'This is a to-do list web application. Users can create to-do list items and manage them. User can mark items completed, set expire time and set priority.',
+                    },
+                ],
+                [
+                    {
+                        type: 'text',
+                        content: 'The project was developed when Billy did not know about HTML, CSS or JavaScript, had no web development experience and only knew the basic syntax of Python. He independently finished the project within 6 days. In these days he self studied Django, PostgreSQL, HTML, CSS and Bootstrap and finally finished the project.',
+                    },
+                ],
+                [
+                    {
+                        type: 'text',
+                        content: 'The project was developed by Billy independently. The front-end was developed using Bootstrap and the back-end was developed using Django framework. The database was PostgreSQL.',
+                    },
+                ],
+            ],
         },
     },
 };

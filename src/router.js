@@ -39,6 +39,9 @@ const router = new Router({
             path: '/projects',
             name: 'projects',
             component: () => import('./views/Projects.vue'),
+            meta: {
+                title: 'title.projects',
+            },
         },
         {
             path: '/games',

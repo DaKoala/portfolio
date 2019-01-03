@@ -8,6 +8,8 @@ const focusImg2 = require('../assets/img/projectDetail/focus/2.png');
 const billSplitterImg1 = require('../assets/img/projectDetail/billSplitter/1.png');
 const billSplitterImg2 = require('../assets/img/projectDetail/billSplitter/2.png');
 const daphneSLaurelImg1 = require('../assets/img/projectDetail/daphneSLaurel/1.png');
+const toDoListImg1 = require('../assets/img/projectDetail/toDoList/1.gif');
+const toDoListImg2 = require('../assets/img/projectDetail/toDoList/2.gif');
 
 export default {
     'awesome-timetable': {
@@ -44,5 +46,12 @@ export default {
         link: 'https://github.com/DaKoala/Daphne-s-Laurel',
         tags: ['p5.js'],
         images: [daphneSLaurelImg1],
+    },
+    'to-do-list': {
+        camelCase: 'toDoList',
+        title: 'To-do List',
+        link: 'https://github.com/DaKoala/Pre-Work---Todo-List',
+        tags: ['Bootstrap', 'Django', 'PostgreSQL'],
+        images: [toDoListImg1, toDoListImg2],
     },
 };
