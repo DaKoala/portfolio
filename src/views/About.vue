@@ -1,6 +1,5 @@
 <template>
     <div>
-        <navigation></navigation>
         <main class="container container--narrow">
             <span class="title" :class="{'title--deactive': !aboutIsActive}" @click="toggleActive">
                 {{$t('about.about')}}
@@ -34,21 +33,16 @@
                 </template>
             </article>
         </main>
-        <contact></contact>
     </div>
 </template>
 
 <script>
-import Navigation from '../components/Navigation.vue';
 import TechStackItem from '../components/TechStackItem.vue';
-import Contact from '../components/Contact.vue';
 import techStackData from '../data/techStack';
 
 export default {
     name: 'About',
     components: {
-        Contact,
-        Navigation,
         TechStackItem,
     },
     data() {

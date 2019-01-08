@@ -6,19 +6,19 @@
                 <font-awesome-icon :icon="['fas', 'bars']"></font-awesome-icon>
             </a>
             <router-link to="/" class="nav__item"
-                         :class="{'nav__item--active': path.length === 1}">
+                         :class="{'nav__item--active': $route.path.length === 1}">
                 {{$t('nav.home')}}
             </router-link>
             <router-link to="/about" class="nav__item"
-                         :class="{'nav__item--active': path.indexOf('about') > -1}">
+                         :class="{'nav__item--active': $route.path.indexOf('about') > -1}">
                 {{$t('nav.about')}}
             </router-link>
             <router-link to="/projects" class="nav__item"
-                         :class="{'nav__item--active': path.indexOf('projects') > -1}">
+                         :class="{'nav__item--active': $route.path.indexOf('projects') > -1}">
                 {{$t('nav.projects')}}
             </router-link>
             <router-link to="/games" class="nav__item"
-                         :class="{'nav__item--active': path.indexOf('games') > -1}">
+                         :class="{'nav__item--active': $route.path.indexOf('games') > -1}">
                 {{$t('nav.games')}}
             </router-link>
             <div class="nav__language" @click="changeLanguage">
@@ -28,27 +28,28 @@
         <transition name="nav-slide">
             <nav class="nav--left" v-if="isNavVisible">
                 <router-link to="/" class="nav__item--small"
-                             :class="{'nav__item--active': path.length === 1}"
+                             :class="{'nav__item--active': $route.path.length === 1}"
                              @click.stop="hideNavLeft">
                     {{$t('nav.home')}}
                 </router-link>
                 <router-link to="/about" class="nav__item--small"
-                             :class="{'nav__item--active': path.indexOf('about') > -1}"
+                             :class="{'nav__item--active': $route.path.indexOf('about') > -1}"
                              @click.stop="hideNavLeft">
                     {{$t('nav.about')}}
                 </router-link>
                 <router-link to="/projects" class="nav__item--small"
-                             :class="{'nav__item--active': path.indexOf('projects') > -1}"
+                             :class="{'nav__item--active': $route.path.indexOf('projects') > -1}"
                              @click.stop="hideNavLeft">
                     {{$t('nav.projects')}}
                 </router-link>
                 <router-link to="/games" class="nav__item--small"
-                             :class="{'nav__item--active': path.indexOf('games') > -1}"
+                             :class="{'nav__item--active': $route.path.indexOf('games') > -1}"
                              @click.stop="hideNavLeft">
                     {{$t('nav.games')}}
                 </router-link>
             </nav>
         </transition>
+        <div class="nav__mask" v-if="isNavVisible" @click="hideNavLeft"></div>
     </div>
 </template>
 
@@ -57,7 +58,6 @@ export default {
     name: 'Navigation',
     data() {
         return {
-            path: this.$route.path,
             isNavVisible: false,
         };
     },
@@ -103,6 +103,15 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .nav__mask {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.3);
     }
 
     .nav--placeholder {

@@ -1,6 +1,5 @@
 <template>
     <div>
-        <navigation></navigation>
         <main class="container container--narrow">
             <h1 class="title">{{project.title}}</h1>
             <p class="support">
@@ -36,18 +35,14 @@
                 </router-link>
             </p>
         </main>
-        <contact></contact>
     </div>
 </template>
 
 <script>
-import Navigation from '../components/Navigation.vue';
-import Contact from '../components/Contact.vue';
 import projectDetail from '../data/projectDetail';
 
 export default {
     name: 'ProjectDetail',
-    components: { Contact, Navigation },
     data() {
         return {
             project: null,

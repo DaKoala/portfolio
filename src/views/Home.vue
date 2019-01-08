@@ -1,6 +1,5 @@
 <template>
     <div>
-        <navigation></navigation>
         <main class="container container--row home-container fade-in">
             <header class="intro">
                 <h1 class="intro__name">{{$t('home.name')}}</h1>
@@ -23,20 +22,12 @@
             </header>
             <img class="photo" src="../assets/img/info/photo.jpeg" />
         </main>
-        <contact></contact>
     </div>
 </template>
 
 <script>
-import Navigation from '../components/Navigation.vue';
-import Contact from '../components/Contact.vue';
-
 export default {
     name: 'home',
-    components: {
-        Contact,
-        Navigation,
-    },
 };
 </script>
 

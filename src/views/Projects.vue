@@ -1,25 +1,19 @@
 <template>
     <div>
-        <navigation></navigation>
         <main class="container project-container">
             <project-card v-for="(project, idx) in projects" :key="idx"
                           :project="project"></project-card>
         </main>
-        <contact></contact>
     </div>
 </template>
 
 <script>
-import Navigation from '../components/Navigation.vue';
 import ProjectCard from '../components/ProjectCard.vue';
-import Contact from '../components/Contact.vue';
 import projectsData from '../data/project';
 
 export default {
     name: 'Projects',
     components: {
-        Contact,
-        Navigation,
         ProjectCard,
     },
     data() {
