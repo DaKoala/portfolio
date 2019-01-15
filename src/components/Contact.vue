@@ -19,6 +19,10 @@
         <a class="footer__item footer__item--wechat" href="/wechat.jpeg" target="_blank">
             <font-awesome-icon :icon="['fab', 'weixin']"></font-awesome-icon>
         </a>
+        <a class="footer__item footer__item--blog" href="https://blog.csdn.net/zyj362633491"
+           target="_blank">
+            <font-awesome-icon :icon="['fas', 'blog']"></font-awesome-icon>
+        </a>
     </footer>
 </template>
 
@@ -62,6 +66,9 @@ export default {
         }
         &--wechat:hover {
             color: $wechat;
+        }
+        &--blog:hover {
+            color: #cb381c;
         }
     }
 

@@ -19,6 +19,7 @@ import {
     faClock,
     faCodeBranch,
     faArrowLeft,
+    faBlog,
 } from '@fortawesome/free-solid-svg-icons';
 import {
     faJsSquare,
@@ -69,6 +70,7 @@ library.add(
     faClock,
     faCodeBranch,
     faArrowLeft,
+    faBlog,
 );
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
