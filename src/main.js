@@ -20,6 +20,7 @@ import {
     faCodeBranch,
     faArrowLeft,
     faBlog,
+    faCompress,
 } from '@fortawesome/free-solid-svg-icons';
 import {
     faJsSquare,
@@ -71,6 +72,7 @@ library.add(
     faCodeBranch,
     faArrowLeft,
     faBlog,
+    faCompress,
 );
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);

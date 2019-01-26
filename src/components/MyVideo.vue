@@ -1,9 +1,9 @@
 <template>
     <div class="video" @pointermove.prevent="handleMouseMove($event)"
          @pointerup.prevent="stopDragging"
-         @pointerleave="handleMouseLeave($event)"
+         @pointerleave="handleMouseLeave"
          @pointerenter="handleMouseEnter" ref="vcontainer">
-        <video class="video__player" ref="v" @timeupdate="handleTimeUpdate($event)"
+        <video class="video__player" ref="v" @timeupdate="handleTimeUpdate"
                @ended="handleEnd">
             <source :src="videoSrc"/>
         </video>
@@ -36,7 +36,9 @@
                     {{videoTimer()}}
                 </div>
                 <div class="controller__btn controller__btn--fullscreen" @click="toggleFullscreen">
-                    <font-awesome-icon :icon="['fas', 'expand']"></font-awesome-icon>
+                    <font-awesome-icon :icon="['fas', 'compress']" v-if="isFullscreen">
+                    </font-awesome-icon>
+                    <font-awesome-icon :icon="['fas', 'expand']" v-else></font-awesome-icon>
                 </div>
             </div>
         </div>
@@ -56,6 +58,7 @@ export default {
             progress: null,
             isPaused: true,
             isMuted: false,
+            isFullscreen: false,
             isDragging: false,
             isControlVisible: false,
             hidingEvent: null,
@@ -75,6 +78,7 @@ export default {
             }
             const currTime = this.video.currentTime || 0;
             const duration = this.video.duration || 0;
+            console.log('timer');
             return `${secToTimer(currTime)} / ${secToTimer(duration)}`;
         },
         pauseVideo() {
@@ -133,6 +137,7 @@ export default {
                 const fullscreenFunc = element.requestFullscreen || element.webkitRequestFullScreen;
                 fullscreenFunc.call(element);
             }
+            this.isFullscreen = !isFullscreen;
         },
         handleTimeUpdate() {
             this.videoProgress = this.video.currentTime / this.video.duration;
