@@ -21,6 +21,7 @@ import {
     faArrowLeft,
     faBlog,
     faCompress,
+    faLeaf,
 } from '@fortawesome/free-solid-svg-icons';
 import {
     faJsSquare,
@@ -73,6 +74,7 @@ library.add(
     faArrowLeft,
     faBlog,
     faCompress,
+    faLeaf,
 );
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);

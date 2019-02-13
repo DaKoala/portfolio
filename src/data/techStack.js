@@ -79,6 +79,10 @@ export default [
         items: [
             {
                 iconList: ['fas', 'database'],
+                text: 'SQL',
+            },
+            {
+                iconList: ['fas', 'leaf'],
                 text: 'MongoDB',
             },
         ],
