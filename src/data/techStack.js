@@ -7,6 +7,10 @@ export default [
                 text: 'JavaScript(Browser and Node.js)',
             },
             {
+                iconList: ['fab', 'js-square'],
+                text: 'TypeScript',
+            },
+            {
                 iconList: ['fab', 'python'],
                 text: 'Python',
             },
